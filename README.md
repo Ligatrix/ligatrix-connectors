@@ -305,7 +305,7 @@ const schema = {
 };
 
 const { errors } = validate(schema, { sku: 'pallet', contact: 'dana@', lines: [{ qty: 2 }, { qty: '3' }, {}], note: 'x' });
-for (const e of errors) console.log(`${e.path} ${e.keyword}: ${e.message}`);
+for (const e of errors) process.stdout.write(`${e.path} ${e.keyword}: ${e.message}\n`);
 ```
 
 ```text

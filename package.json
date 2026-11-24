@@ -1,0 +1,50 @@
+{
+  "name": "@ligatrix/connectors",
+  "version": "1.0.0",
+  "description": "Bring events from the systems a company already uses into one consistent, validated work item shape.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Ligatrix LLC <info@ligatrix.com>",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./schemas/work-item.schema.json": "./schemas/work-item.schema.json"
+  },
+  "files": [
+    "src",
+    "schemas",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint": "node scripts/lint.mjs",
+    "example": "node examples/run.mjs"
+  },
+  "keywords": [
+    "webhook",
+    "integration",
+    "json-schema",
+    "csv",
+    "hmac",
+    "idempotency",
+    "normalization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ligatrix/ligatrix-connectors.git"
+  },
+  "homepage": "https://github.com/Ligatrix/ligatrix-connectors#readme",
+  "bugs": {
+    "url": "https://github.com/Ligatrix/ligatrix-connectors/issues"
+  }
+}

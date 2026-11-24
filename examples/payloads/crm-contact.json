@@ -1,0 +1,14 @@
+{
+  "id": "evt_7c1a41",
+  "type": "contact.created",
+  "occurred_at": "2026-11-22T09:41:00+01:00",
+  "data": {
+    "id": "C-3307",
+    "first_name": "Leo",
+    "last_name": "Marsh",
+    "email": "LEO.MARSH@buyer.example",
+    "company": "A fictional buyer used in this demo",
+    "lifecycle_stage": "lead",
+    "owner": "Dana <dana@corvane.example>"
+  }
+}

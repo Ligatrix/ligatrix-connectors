@@ -1,0 +1,18 @@
+{
+  "id": "evt_7c1a40",
+  "type": "deal.stage_changed",
+  "occurred_at": "2026-11-21T15:20:00Z",
+  "data": {
+    "id": "D-1042",
+    "name": "Annual restock contract, north region",
+    "stage": "Proposal",
+    "amount": "48,500.00",
+    "currency": "usd",
+    "owner": { "name": "Dana", "email": "Dana@corvane.example" },
+    "contact": { "name": "Priya", "email": "priya@buyer.example" },
+    "tags": ["renewal", "north"],
+    "close_date": "2026-12-15",
+    "created_at": "2026-10-02T09:00:00Z",
+    "updated_at": "2026-11-21T15:20:00Z"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "form": { "name": "Returns request" },
+  "submission": {
+    "id": "sub_00981",
+    "created": "2026-11-24T07:15:00Z",
+    "fields": {
+      "topic": "Return 12 damaged pallets",
+      "message": "Pallets arrived with broken slats. Photos attached in the portal.",
+      "email": "Noah <noah@buyer.example>",
+      "urgency": "ASAP"
+    },
+    "tags": ["returns"]
+  }
+}

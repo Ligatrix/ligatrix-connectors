@@ -1,0 +1,17 @@
+{
+  "event": "ticket.updated",
+  "ticket": {
+    "id": 4821,
+    "subject": "Invoice  shows the wrong\nshipping address",
+    "description": "Our invoice INV-2207 lists the old depot address.",
+    "status": "pending",
+    "priority": "urgent",
+    "requester": { "name": "Mia", "email": "mia@buyer.example" },
+    "assignee": { "name": "Sam", "email": "sam@corvane.example" },
+    "tags": ["billing", "Billing", "address"],
+    "channel": "email",
+    "created_at": "2026-11-23 16:02:10",
+    "updated_at": 1795452300,
+    "url": "https://help.corvane.example/tickets/4821"
+  }
+}

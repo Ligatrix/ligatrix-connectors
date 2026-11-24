@@ -1,0 +1,7 @@
+order_id,customer,summary,notes,status,total,created
+SO-55120,Mia <mia@buyer.example>,Restock: shrink wrap,"Deliver to dock 3, not the front office",In Progress,"1,240.00",2026-11-19
+SO-55121,noah@buyer.example,"Pallet jack, ""heavy duty"" variant","Two lines:
+first line
+second line",open,860.50,2026-11-20T13:00:00Z
+SO-55122,,Label printer ribbons,,shipped,99,2026-11-21
+SO-55123,mia@buyer.example,Stretch film,,open,310,2026-02-30

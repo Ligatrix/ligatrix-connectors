@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ligatrix/ligatrix-connectors/schemas/work-item.schema.json",
+  "title": "WorkItem",
+  "description": "One unit of inbound work, in the same shape whichever system it came from.",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "externalId",
+    "kind",
+    "title",
+    "status",
+    "priority",
+    "labels",
+    "createdAt",
+    "updatedAt",
+    "receivedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "description": "Stable identifier: \"<source>:<externalId>\".",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 300
+    },
+    "source": {
+      "description": "The system the item came from, lower case.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]{0,39}$"
+    },
+    "externalId": {
+      "description": "The item's identifier in its source system.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "parentId": {
+      "description": "The WorkItem id this item belongs to, for example the issue a comment was left on.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 300
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "task",
+        "issue",
+        "comment",
+        "deal",
+        "contact",
+        "ticket",
+        "request",
+        "order"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "body": {
+      "type": "string",
+      "maxLength": 65536
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "waiting",
+        "done",
+        "cancelled"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "normal",
+        "high",
+        "urgent"
+      ]
+    },
+    "requester": {
+      "description": "Who raised it.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    },
+    "assignee": {
+      "description": "Who owns it.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "amount": {
+      "type": "object",
+      "required": [
+        "value",
+        "currency"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$"
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "receivedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "attributes": {
+      "description": "Source-specific facts worth keeping, as flat scalar values.",
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}
